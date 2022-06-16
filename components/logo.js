@@ -40,7 +40,7 @@ const Logo = () => {
                 fontWeight="bold"
                 ml={3}
               >
-                Igor do Nascimento
+                IgorRhamon
               </Text>
               
             </WrapItem>
