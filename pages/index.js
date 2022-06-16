@@ -73,11 +73,6 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
-      <Section>
-        <Heading as="h3" variant="section-title" align="center">
-          E o Danilo Faleiro é o Amor da minha vida!
-        </Heading>
-      </Section>
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Work
