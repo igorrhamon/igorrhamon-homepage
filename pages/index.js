@@ -73,7 +73,11 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
-
+      <Section>
+        <Heading as="h3" variant="section-title" align="center">
+          E o Danilo Faleiro é o Amor da minha vida!
+        </Heading>
+      </Section>
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Work
@@ -115,7 +119,10 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
-          Worked at Caixa Econômica Federal
+          Worked at {' '}
+            <NextLink href="https://www.caixa.gov.br/" passHref scroll={false}>
+              <Link>Caixa Econômica Federal</Link>
+            </NextLink>
         </BioSection>
         <BioSection>
           <BioYear>2022 - Now</BioYear>
