@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Text, useColorModeValue } from '@chakra-ui/react'
+import { Text, useColorModeValue, Wrap, WrapItem, Center } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
@@ -28,15 +28,23 @@ const Logo = () => {
     <Link href="/" scroll={false}>
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
-          <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='M PLUS Rounded 1c", sans-serif'
-            fontWeight="bold"
-            ml={3}
-          >
-            Takuya Matsuyama
-          </Text>
+          <Wrap>
+            <WrapItem>
+              <Image src={footPrintImg} width={20} height={20} alt="logo" />
+              
+            </WrapItem>
+            <WrapItem>
+              <Text
+                color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+                fontFamily='M PLUS Rounded 1c", sans-serif'
+                fontWeight="bold"
+                ml={3}
+              >
+                Igor do Nascimento
+              </Text>
+              
+            </WrapItem>
+          </Wrap>
         </LogoBox>
       </a>
     </Link>
