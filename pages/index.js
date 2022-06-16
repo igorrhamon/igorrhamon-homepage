@@ -9,7 +9,7 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
+  chakra,
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -120,7 +120,7 @@ const Home = () => (
             </NextLink>
         </BioSection>
         <BioSection>
-          <BioYear>2022 - Now</BioYear>
+          <BioYear>Now</BioYear>
           Working as Software Developer at {' '}
           <NextLink href="http://www.bb.com.br" passHref scroll={false}>
             <Link>Banco do Brazil</Link>
