@@ -120,7 +120,7 @@ const Home = () => (
             </NextLink>
         </BioSection>
         <BioSection>
-          <BioYear>Now</BioYear>
+          <BioYear>2022</BioYear>
           Working as Software Developer at {' '}
           <NextLink href="http://www.bb.com.br" passHref scroll={false}>
             <Link>Banco do Brazil</Link>
