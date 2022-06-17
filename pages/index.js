@@ -73,7 +73,7 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
-      <Section delay={0.1}>
+      <Section delay={0.05}>
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
@@ -95,7 +95,7 @@ const Home = () => (
         </Box>
       </Section>
 
-      <Section delay={0.2}>
+      <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -103,11 +103,11 @@ const Home = () => (
           <BioYear>1993</BioYear>
           Born in Brasília , Brazil.
         </BioSection>
-        <BioSection>
+        {/* <BioSection>
           <BioYear>2010</BioYear>
           Initiated the Master&apos;s Program in the Graduate School of
           Computer Engineering at University of Brasília (UNB).
-        </BioSection>
+        </BioSection> */}
         <BioSection>
           <BioYear>2012</BioYear>
           Worked at Senado Federal.
@@ -128,7 +128,7 @@ const Home = () => (
         </BioSection>
       </Section>
 
-      <Section delay={0.3}>
+      <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
