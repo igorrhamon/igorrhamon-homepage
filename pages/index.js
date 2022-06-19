@@ -1,4 +1,7 @@
 import NextLink from 'next/link'
+import {useRouter} from 'next/router'
+
+
 import {
   Link,
   Container,
@@ -25,8 +28,18 @@ import Image from 'next/image'
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
+import en from '../locales/index/en.js'
+import pt from '../locales/index/pt.js'
 
-const Home = () => (
+
+
+const Home = function (){
+  
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'pt' ? en :  pt;
+
+  return (
   <Layout>
     <Container>
       <Box
@@ -43,9 +56,9 @@ const Home = () => (
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Igor do Nascimento
+            {t.name}
           </Heading>
-          <p>Backend Developer ( Developer / Student )</p>
+          <p>{t.title} ( {t.subtitle} )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -75,7 +88,7 @@ const Home = () => (
       </Box>
       <Section delay={0.05}>
         <Heading as="h3" variant="section-title">
-          Work
+          Bio
         </Heading>
         <Paragraph>
           Igor is a freelance and a full-stack developer based in Brazil with a
@@ -97,7 +110,7 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Bio
+          Work
         </Heading>
         <BioSection>
           <BioYear>1993</BioYear>
@@ -216,7 +229,7 @@ const Home = () => (
       </Section>
     </Container>
   </Layout>
-)
-
+  )
+}
 export default Home
 export { getServerSideProps } from '../components/chakra'
