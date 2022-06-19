@@ -37,7 +37,7 @@ const Home = function (){
   
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'pt' ? en :  pt;
+  const t = locale === 'pt' ? pt :  en;
 
   return (
   <Layout>
@@ -91,13 +91,8 @@ const Home = function (){
           Bio
         </Heading>
         <Paragraph>
-          Igor is a freelance and a full-stack developer based in Brazil with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          working out and chilling at natural parks. Currently, he is living off of his own
-          portfolio site. He publishes content for talking about his learning experience as a software Padawan.
-        
+          
+          {t.bio}
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="#" passHref scroll={false}>

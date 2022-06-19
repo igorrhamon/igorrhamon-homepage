@@ -1,22 +1,27 @@
 
+// import {i18n } from "../i18n"
 
-import {Button} from '@chakra-ui/react'
+import {Button, Link} from '@chakra-ui/react'
 
 import {useRouter} from 'next/router'
 
 
-// Function to change the default language
-
-
+// Function to set the language on cache
 // Function to change the default language
 const ChangeLanguage = () =>{
-    
+    // const [language, setLanguage] = useState("en")
     const router = useRouter();
     const { locale } = router;
-
+    const href = `/${locale === 'en' ? 'pt' : 'en'}${router.asPath}`;
+    
+    
 
     return <>
-        <Button colorScheme='blue' >{locale.toUpperCase()}</Button>
+        <Button colorScheme='blue'  >
+            <Link href={href} locale="en">
+                <a>{locale === 'en'? 'PT' : 'EN'}</a>
+            </Link>
+        </Button>
     </>
 }
 
