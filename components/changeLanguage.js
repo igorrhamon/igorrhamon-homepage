@@ -1,27 +1,36 @@
 
 // import {i18n } from "../i18n"
 
-import {Button, Link} from '@chakra-ui/react'
+import {Button, Link, useState, Text} from '@chakra-ui/react'
 
 import {useRouter} from 'next/router'
 
 
-// Function to set the language on cache
+// Function to set new language on navbar
+const onChangeLanguage = (lang) => (e) => {
+    e.preventDefault()
+    router.push(router.asPath, undefined, { locale: lang })
+}
+
 // Function to change the default language
 const ChangeLanguage = () =>{
-    // const [language, setLanguage] = useState("en")
     const router = useRouter();
     const { locale } = router;
-    const href = `${locale === 'en' ? 'pt' : 'en'}/${router.asPath}`;
-    console.log(href)
+    // const [lang, setLang] = useState(locale);
+
+    // const [lang, setLang] = useState("en");
+    
+    const href = `${locale === 'en' ? 'pt-BR': 'en'}`.concat(router.route) ;
+    // console.log(router.route)
+    console.log(locale)
     
 
     return <>
-        <Button colorScheme='blue'  >
-            <Link href={href} locale="en">
-                <a>{locale === 'en'? 'PT' : 'EN'}</a>
+        {/* <Button colorScheme='blue'  >
+            <Link href={router.route} locale={locale === 'en' ? 'en': 'pt-BR'}>
+                <a><Text>{locale === 'en' ? 'PT-BR': 'en'}</Text></a>
             </Link>
-        </Button>
+        </Button> */}
     </>
 }
 
