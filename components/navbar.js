@@ -12,11 +12,14 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
+  Wrap,
+  WrapItem
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
+import ChangeLanguage from './changeLanguage'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -38,6 +41,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+
 
   return (
     <Box
@@ -93,7 +97,16 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
-          <ThemeToggleButton />
+          <Wrap>
+            <WrapItem>
+              <ChangeLanguage />
+
+            </WrapItem>
+            <WrapItem>
+              <ThemeToggleButton />
+
+            </WrapItem>
+          </Wrap>
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
