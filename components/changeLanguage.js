@@ -12,7 +12,7 @@ const ChangeLanguage = () =>{
     // const [language, setLanguage] = useState("en")
     const router = useRouter();
     const { locale } = router;
-    const href = `${locale === 'en' ? 'pt' : 'en'}`;
+    const href = `${locale === 'en' ? 'pt' : 'en'}/${router.asPath}`;
     console.log(href)
     
 
